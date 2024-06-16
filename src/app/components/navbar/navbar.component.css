@@ -1,0 +1,104 @@
+
+/* ---------------paleta de colores ----------------*/
+.peleta__colores{
+    border: 1px solid red;
+    max-height: 11rem;
+}
+.tema_titulo{
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2rem 1.5rem 0;
+}
+.tema_lista{
+    border: 1px solid gold;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    text-align: center;
+    padding: 1rem 1.5rem 2rem;
+}
+.tema_item{
+    display: inline-block;
+    position: relative;
+    border-radius: 0.5em;
+    transform: scale(1);
+    transition: transform .2s cubic-bezier(.4, 0, .2, 1);
+}
+.tema_btn{
+    display: block;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    background-color: red;
+}
+.tema_nombre{
+    display: block;
+    color: white;
+}
+.tema_paleta{
+    display: block;
+    padding: 0.125em 0;
+}
+.tema_bg{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-indent: 100%;
+    text-align: left;
+    overflow: hidden;
+    vertical-align: bottom;
+    box-shadow: 0 0 0 2px #fff;
+}
+/*-------------------- paleta de colores ------------------*/
+
+/* -------------------custom  navbar-----------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.9rem;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+    margin-right: auto;
+}
+
+.navbar .link {
+    position: relative;
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+
+.navbar .link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 1px;
+    height: 0.2rem;
+    background: blue;
+}
+
+#icon_palette {
+    font-size: 2.4rem;
+    color: white;
+}

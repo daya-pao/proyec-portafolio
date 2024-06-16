@@ -1,0 +1,167 @@
+
+.section_home {
+   
+    padding: 5.9rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home .home_content {
+    flex: 1;
+    max-width: 44rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home_content .home_titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 0.3;
+}
+
+.home_content .home_nombre {
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.home_content .home_info {
+    font-size: 1.5rem;
+}
+
+.home_content .social_media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid green;
+    border-radius: 50%;
+    box-shadow: 0 0.2rem 0.5rem rebeccapurple;
+    font-size: 2rem;
+    color: aqua;
+    margin: 2.5rem 1.5rem 3rem 0;
+    transition: 0.5s ease;
+}
+
+/*.home_content .social_media a:hover {
+    background: red;
+    color: white;
+}*/
+
+.btn {
+    display: inline-block;
+    padding: 1rem 1rem;
+    background: rgb(96, 96, 128);
+    border-radius: 0.6rem;
+    /*box-shadow: 0 0.2rem 0.5rem red;*/
+    font-size: 1.4rem;
+    color: white;
+    border: 0.2rem solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/*.btn:hover {
+    background: transparent;
+    color: blueviolet;
+    border: #ee82ee;
+}*/
+
+/*------------------- custom  navbar---------------------*/
+/*------------------------CUBO----------------------------*/
+.container {
+    perspective: 1000px; /* Distancia de visualización del cubo */
+    width: 250px; /* Ancho del contenedor */
+    height: 250px; /* Alto del contenedor */
+    margin: 100px auto;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+    
+   
+}
+
+.face {
+    position: absolute;
+    width: 250px; /* Ancho de la cara */
+    height: 250px; /* Alto de la cara */
+    line-height: 250px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(#1515159c,#00ec00e0);
+    transition: opacity 0.5s; /* Transición suave de la opacidad */
+    animation: neon-border 1.5s infinite alternate-reverse;
+}
+.face::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 5px;
+    z-index: -1;
+    animation: neon-border 1.9s infinite alternate-reverse;
+}
+
+.front { transform: translateZ(125px); }
+.back { transform: rotateY(180deg) translateZ(125px); }
+.top { transform: rotateX(90deg) translateZ(125px); }
+.bottom { transform: rotateX(-90deg) translateZ(125px); }
+.left { transform: rotateY(-90deg) translateZ(125px); }
+.right { transform: rotateY(90deg) translateZ(125px); }
+
+
+
+@keyframes rotate {
+    from { transform: rotateX(0) rotateY(0) rotateZ(0); }
+    to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+@keyframes neon-border {
+    0%, 100% {
+        box-shadow: 0 0 10px #00ff0082, 0 0 9px #00ff0082, 0 0 9px #00ff00, 0 0 8px #00ff00, 0 0 5px #00ff00, 0 0 3px #00ff00, 0 0 5px #00ff00, 0 0 4px #00ff00;
+    }
+    50% {
+        box-shadow: none;
+    }
+}
+/*---------------------------fin cubo--------------------------*/
+
+
+
+
+/*------------------qurey----------------*/
+
+@media screen and (max-width: 768px) {
+    .home .home_content {
+        margin-right: 0;
+    }
+
+    .navbar {
+        flex: 1;
+        margin-top: 1rem;
+        order: -1;
+    }
+
+    .navbar .link {
+        margin-right: 1rem;
+    }
+
+    #icon_palette {
+        margin-left: auto;
+    }
+}
+/*------------------qurey----------------*/
