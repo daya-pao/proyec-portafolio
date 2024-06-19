@@ -65,7 +65,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     padding: 2vw 2vw;
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@
 }
 
 .logo {
-    font-size: 1.9rem;
+    font-size: 2vw;
     color: white;
     font-weight: 600;
     cursor: default;
@@ -82,23 +82,23 @@
 
 .navbar .link {
     position: relative;
-    font-size: 1.7rem;
+    font-size: 2vw;
     color: white;
     font-weight: 500;
-    margin-right: 3.5rem;
+    margin-right: 3.5vw;
 }
 
 .navbar .link.active::before {
     content: '';
     position: absolute;
     left: 0;
-    width: 100%;
+    width: 6vw;
     bottom: 1px;
-    height: 0.2rem;
+    height: 0.2vw;
     background: blue;
 }
 
 #icon_palette {
-    font-size: 2.4rem;
+    font-size: 3vw;
     color: white;
 }
