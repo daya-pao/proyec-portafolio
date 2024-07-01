@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
+
 
 @Component({
   selector: 'app-about',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  
 
+  
 }
