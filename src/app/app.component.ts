@@ -8,8 +8,7 @@ import { ServicioComponent } from './components/servicio/servicio.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,
-    NavbarComponent,AboutComponent,ServicioComponent],
+  imports: [RouterOutlet,HomeComponent,NavbarComponent,AboutComponent,ServicioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
