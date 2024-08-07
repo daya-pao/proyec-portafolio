@@ -1,6 +1,12 @@
+.about__lenguajes {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+
+}
 .cubo_container{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
   gap: 3vw;
@@ -12,11 +18,12 @@
   50%{filter:hud-rotate(360deg)}
 }
 .grid{
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4vw; 
   max-width: 1200px; 
-  margin: 0 auto;
+  padding: 3vw;
 }
 .cube{
   position: relative;
@@ -86,13 +93,61 @@ i{
   0 0 200px rgba(255,6,6,0.75),
   0 0 200px rgba(255,6,6,0.1);
 }
-/*i{
+
+/*---------card----------*/
+.box__Card{
+  position: relative;
+  width: 60vw;
+  height: 60vh;
+  background:#000000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.box__Card::after{
+  content: "";
   position: absolute;
-  font-size: 7em;
-  color: rgba(255,6,6,1);
-  text-shadow: 0 0 50px rgba(255,6,6,0.25),
-  0 0 100px rgba(255,6,6,0.5),
-  0 0 200px rgba(255,6,6,0.75),
-  0 0 200px rgba(255,6,6,0.1);
+  width: 60vw;
+  height:60vw;
+  background-image: conic-gradient(transparent,
+  transparent,transparent,#ff00ee);
+  animation: aniCard 4s linear infinite;
   
-}*/
+}
+.box__Card::before{
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height:60vh;
+  background-image: conic-gradient(transparent,
+  transparent,transparent,#00ccff);
+  animation: aniCard 4s linear infinite;
+  animation-delay: -2s;
+
+}
+@keyframes aniCard{
+  0%{transform: rotate(0deg);}
+  100%{transform:rotate(360deg) ;}
+}
+.box__Card span{
+  position: absolute;
+  inset: 5px;
+  border-radius: 16px;
+ background: #222;
+  z-index: 1;
+}
+
+
+/*--------card info-------*/
+.Card__info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Card__info__img{
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
