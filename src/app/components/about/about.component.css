@@ -94,60 +94,121 @@ i{
   0 0 200px rgba(255,6,6,0.1);
 }
 
-/*---------card----------*/
-.box__Card{
-  position: relative;
+/*--------card info-------*/
+
+.card__texto {
   width: 60vw;
-  height: 60vh;
-  background:#000000;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.box__Card::after{
-  content: "";
-  position: absolute;
-  width: 60vw;
-  height:60vw;
-  background-image: conic-gradient(transparent,
-  transparent,transparent,#ff00ee);
-  animation: aniCard 4s linear infinite;
+  height: 50vh;
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   
 }
-.box__Card::before{
-  content: "";
-  position: absolute;
-  width: 60vw;
-  height:60vh;
-  background-image: conic-gradient(transparent,
-  transparent,transparent,#00ccff);
-  animation: aniCard 4s linear infinite;
-  animation-delay: -2s;
-
+.texto{
+  font-size: 2vw;
+  margin-left: 20vw;
 }
-@keyframes aniCard{
-  0%{transform: rotate(0deg);}
-  100%{transform:rotate(360deg) ;}
-}
-.box__Card span{
-  position: absolute;
-  inset: 5px;
-  border-radius: 16px;
- background: #222;
-  z-index: 1;
+.icon{
+  margin-top: -10vw;
+  font-size: 20vw;
+  text-align: center;
+  color:rgb(14, 14, 14);
+  text-shadow: none;
 }
 
+/* Definir animaciones de desvanecimiento y deslizamiento */
 
-/*--------card info-------*/
-.Card__info{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Desvanecimiento y deslizamiento hacia la izquierda */
+@keyframes slideLeftIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.Card__info__img{
-  display: flex;
-  align-items: center;
-  margin: auto;
+
+@keyframes slideLeftOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
 }
+
+/* Desvanecimiento y deslizamiento hacia la derecha */
+@keyframes slideRightIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+/* Desvanecimiento y deslizamiento hacia arriba */
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+.card__texto.slide-left-out {
+  animation: slideLeftOut 0.5s forwards; /* Animación de salida hacia la izquierda */
+}
+
+.card__texto.slide-left-in {
+  animation: slideLeftIn 0.5s forwards; /* Animación de entrada hacia la izquierda */
+}
+
+.card__texto.slide-right-out {
+  animation: slideRightOut 0.5s forwards; /* Animación de salida hacia la derecha */
+}
+
+.card__texto.slide-right-in {
+  animation: slideRightIn 0.5s forwards; /* Animación de entrada hacia la derecha */
+}
+
+.card__texto.slide-up-out {
+  animation: slideUpOut 0.5s forwards; /* Animación de salida hacia arriba */
+}
+
+.card__texto.slide-up-in {
+  animation: slideUpIn 0.5s forwards; /* Animación de entrada hacia arriba */
+}
+

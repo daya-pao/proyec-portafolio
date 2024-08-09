@@ -2,9 +2,8 @@
   <div class="cubo_container">
     <div class="grid">
       @for (cube of cubes; track $index) {
-  
         <div class="cube">
-          <div class="box">
+          <div class="box" (click)="showIcon($index)">
             <div class="top"><i  [class]="cube.iconClass"></i></div>
             <span style="--i:0;"></span>
             <span style="--i:1;"></span>
@@ -16,20 +15,11 @@
     </div>
   </div>
   <!------------------ card --------------------->
-  <div class="box__Card">
-    <span class="Card__info">
-      <div class="Card__info__img">
-        <div>
-          <img src="assets/icon-angular.png" alt="">
-        </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magnam delectus maiores minima, perspiciatis natus quia, voluptate praesentium aut repellendus debitis deleniti odit vero libero ab ducimus. Sit, alias mollitia!</p>
-      </div>
-      <div class="progress-container">
-        <label for="progress-bar">Nivel de Aprendizaje:</label>
-        <progress id="progress-bar" value="70" max="100"></progress>
-      </div>
-    </span>
+  <div class="card__texto animate-in">
+    <div><i [class]="selectedIcon"  class="icon"></i></div>
+    <div><p class="texto">{{description}}</p></div>
   </div>
+  
 </section>
 
 
