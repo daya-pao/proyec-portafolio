@@ -27,21 +27,28 @@ export class AboutComponent {
   ];
 
   descriptions = [
-    'TypeScript es un superset de JavaScript que añade tipos estáticos.',
-    'PHP es un lenguaje de scripting del lado del servidor muy utilizado para el desarrollo web.',
-    'HTML5 es la última versión del lenguaje de marcado para la creación de páginas web.',
-    'Angular es un framework de desarrollo web para construir aplicaciones de una sola página.',
-    'React es una biblioteca para construir interfaces de usuario, especialmente para aplicaciones de una sola página.',
+    'Typescript es Un superconjunto de JavaScript que añade tipado estático y características avanzadas, facilitando el desarrollo de aplicaciones grandes y robustas.',
+    'PHP es un lenguaje de scripting del lado del servidor muy utilizado para el desarrollo web y la creación de aplicaciones dinámicas.',
+    'HTML5 es la última versión del lenguaje de marcado para la creación de páginas web soportando multimedia y gráficos.',
+    'Angular es un framework de desarrollo web para construir aplicaciones de una sola página con una arquitectura robusta.',
+    'React es una biblioteca para construir interfaces de usuario, especialmente para aplicaciones de una sola página interactivas y dinamicas.',
     'JavaScript es un lenguaje de programación que permite la creación de contenido interactivo en la web.',
-    'TypeScript es un superset de JavaScript que añade tipos estáticos.',
+    'Typescript es Un superconjunto de JavaScript que añade tipado estático y características avanzadas, facilitando el desarrollo de aplicaciones grandes y robustas.',
     'Python es un lenguaje de programación de alto nivel conocido por su legibilidad y simplicidad.',
     'Git es un sistema de control de versiones distribuido para el seguimiento de cambios en el código fuente.',
-    'Angular es un framework de desarrollo web para construir aplicaciones de una sola página.',
-    'React es una biblioteca para construir interfaces de usuario, especialmente para aplicaciones de una sola página.',
+    'Angular es un framework de desarrollo web para construir aplicaciones de una sola página con una arquitectura robusta.',
+    'React es una biblioteca para construir interfaces de usuario, especialmente para aplicaciones de una sola página interactivas y dinamicas.',
     'JavaScript es un lenguaje de programación que permite la creación de contenido interactivo en la web.'
   ];
+
+  percentages = [
+    30, 30, 80,  65, 70, 85, 30, 90, 85,  65, 70,  85
+  ];
+
+
   selectedIcon: string = 'bx bxl-typescript';
   description: string = 'TypeScript es un superset de JavaScript que añade tipos estáticos';
+  percentage: number = 30;
 
   showIcon(index: number) {
     const card = document.querySelector('.card__texto') as HTMLElement;
@@ -58,8 +65,10 @@ export class AboutComponent {
         if (selectedCube) {
           this.selectedIcon = selectedCube.iconClass;
           this.description = this.descriptions[selectedCube.index] || ' ';
+          this.percentage = this.percentages[selectedCube.index] || 0; 
           console.log('Selected Icon Class:', this.selectedIcon);
           console.log('Description:', this.description);
+          console.log('Percentage:', this.percentage);
         } else {
           this.selectedIcon = '';
           this.description = '';
@@ -90,6 +99,16 @@ export class AboutComponent {
     const animations = ['slide-left-in', 'slide-right-in', 'slide-up-in'];
     return animations[index % animations.length];
   }
+  getColor(): string {
+    // Puedes definir una lógica para elegir el color basado en el porcentaje
+    if (this.percentage > 75) {
+      return '#43f94a'; // Verde
+    } else if (this.percentage > 50) {
+      return '#f9d142'; // Amarillo
+    } else {
+      return '#f94a4a'; // Rojo
+    }
+  }
 
 
   /*message:string = " ";
@@ -116,7 +135,4 @@ export class AboutComponent {
       
     }
   }*/
-
-  
-  
 }

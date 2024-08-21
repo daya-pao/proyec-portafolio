@@ -16,10 +16,14 @@
   </div>
   <!------------------ card --------------------->
   <div class="card__texto animate-in">
-    <div><i [class]="selectedIcon"  class="icon"></i></div>
+    <div class="card__progress"[ngStyle]="{ '--i': percentage / 100, '--clr': getColor() }" >
+      <div class="progress">
+        <div class="card__icon"><i [class]="selectedIcon"  class="icon"></i></div>
+        <div class="card--porcentaje"><h2>{{ percentage }}%</h2></div>
+      </div>
+    </div>
     <div><p class="texto">{{description}}</p></div>
   </div>
-  
 </section>
 
 

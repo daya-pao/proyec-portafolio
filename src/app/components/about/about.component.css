@@ -1,3 +1,6 @@
+:root{
+  --gris:#635f5f;
+}
 .about__lenguajes {
   display: flex;
   align-items: center;
@@ -108,15 +111,19 @@ i{
 }
 .texto{
   font-size: 2vw;
-  margin-left: 20vw;
 }
 .icon{
-  margin-top: -10vw;
-  font-size: 20vw;
+  margin-top:-18vw;
+  font-size: 14vw;
   text-align: center;
+  margin-left: 3vw;
   color:rgb(14, 14, 14);
   text-shadow: none;
+  border-radius: 50%;
+  z-index: 1;
 }
+
+
 
 /* Definir animaciones de desvanecimiento y deslizamiento */
 
@@ -210,5 +217,45 @@ i{
 
 .card__texto.slide-up-in {
   animation: slideUpIn 0.5s forwards; /* Animación de entrada hacia arriba */
+}
+
+
+/*-------card__progress-----*/
+.card__progress .progress{
+  position: relative;
+  width: 20vw;
+  height: 45vh;
+  border-radius: 50%;
+  color: #fff;
+  background: conic-gradient(var(--clr) calc(var(--i) * 100%), transparent 0); 
+}
+.card__progress .progress::before{
+  content:" ";
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+  transform: translate(-50%, -50%);
+ 
+  
+  
+}
+.card__progress .progress::after{
+  content: " ";
+  position: absolute;
+  background: #222;
+  inset: 10px;
+  border-radius: 50%;
+  
+}
+.card--porcentaje {
+  position: absolute;
+  top: 16vw;
+  left: 10vw;
+  transform: translate(-50%, -50%);
+  color: #fff; 
+  font-size: 1rem;
+  z-index: 1;
 }
 
