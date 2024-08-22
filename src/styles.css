@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Epilogue:wght@400;500;700&family=Kumbh+Sans:wght@100;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,300&family=Rubik:wght@300&family=Space+Mono:wght@700&display=swap');
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +7,7 @@
     text-decoration: none;
     border: none;
     outline: none;
+    list-style: none;
     scroll-behavior: smooth;
     font-family: 'poppins', sans-serif;
 }
