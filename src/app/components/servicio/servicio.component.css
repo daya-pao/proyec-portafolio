@@ -1,12 +1,25 @@
+/*.services{
+    border: 1px solid red;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+.services-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+
+
 .services-grid{
     display: flex;
     justify-content: space-around;
 }
 .service{
     position: relative;
-    border: 1px solid red;
-    width: 20vw;
-    height: 60vh;
+    width: 22vw;
+    height: 50vh;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 1vw;
     display: flex;
@@ -41,21 +54,160 @@
     position: absolute;
     inset: 5px;
     background: #3f3f40;
-    border-radius: 1vw;
     z-index: 1;
+    border-radius: 1vw;
+}
+.service-icon{
+    position: relative; 
+    z-index: 2; 
+    display: flex; 
+    gap: 1vw;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     
 }
+.icon-list li::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c"; 
+    color: #050505;
+    font-weight: 900;
+}
+.fas{
+    font-size: 3vw;
+}*/
 
-.service-info{
-    position: relative; /* Mantiene la posición relativa */
-    z-index: 2; /* Asegura que el contenido esté sobre los pseudoelementos */
-    display: flex; /* Utiliza flexbox para centrar el contenido */
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    padding: 15px; /* Añadido padding para separar el contenido de los bordes */
-    color: #fff; /* Color del texto para contraste */
-    height: 100%; /* Asegura que el contenido ocupe toda la altura disponible */
-    text-align: center; 
+/* Estilo general del contenedor de servicios */
+.services {
+    height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+/* Estilo del contenedor principal de servicios */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw; /* Espacio entre el texto y la cuadrícula de servicios */
+    align-items: center; /* Centra el contenido horizontalmente dentro del contenedor */
+}
+
+/* Estilo del contenedor de texto */
+.intro-text {
+    max-width: 800px; /* Ancho máximo del contenedor de texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.1); /* Sombra suave */
+    position: relative; /* Necesario para posicionar el cursor */
+    overflow: hidden; /* Oculta el texto que excede el contenedor */
+    font-size: 1.2vw; /* Tamaño del texto del párrafo */
+    font-family: monospace; /* Fuente monoespaciada para el efecto de máquina de escribir */
+    line-height: 1.5; /* Altura de línea para espaciar el texto */
+    height: 6em; /* Ajusta la altura según sea necesario */
+    white-space: pre-wrap; /* Mantiene los espacios y saltos de línea */
 
 }
+
+/* Estilo para el encabezado */
+.intro-text h2 {
+    font-size: 28px; /* Tamaño del texto del encabezado */
+    margin-bottom: 10px; /* Espacio debajo del encabezado */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para el párrafo */
+.intro-text p {
+    font-size: 1.2vw; /* Tamaño del texto del párrafo */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    color: #8b8888; /* Color del texto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Estilo de la cuadrícula de servicios */
+.services-grid {
+    display: flex;
+    gap: 3vw;
+    justify-content: space-around; /* Espacia los elementos dentro de la cuadrícula */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Estilo de cada servicio */
+.service {
+    position: relative;
+    width: 22vw; /* Ancho del servicio */
+    height: 50vh; /* Altura del servicio */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad */
+    border-radius: 1vw; /* Bordes redondeados */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden; /* Oculta el contenido desbordado */
+}
+
+/* Estilo de la animación de los servicios */
+.service::before {
+    content: " ";
+    position: absolute;
+    width: 50vw; /* Ancho del fondo animado */
+    height: 60vh; /* Altura del fondo animado */
+    background-image: conic-gradient(transparent, transparent, transparent, #ff00ae);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.service::after {
+    content: " ";
+    position: absolute;
+    width: 50vw; /* Ancho del fondo animado */
+    height: 60vh; /* Altura del fondo animado */
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilo interno del servicio */
+.service div {
+    position: absolute;
+    inset: 5px;
+    background: #3f3f40; /* Fondo interno del servicio */
+    z-index: 1; /* Asegura que el contenido esté sobre el fondo animado */
+    border-radius: 1vw; /* Bordes redondeados internos */
+}
+
+/* Estilo del ícono del servicio */
+.service-icon {
+    position: relative;
+    z-index: 2; /* Asegura que el ícono esté sobre el fondo animado */
+    display: flex;
+    gap: 1vw; /* Espacio entre los elementos internos */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de la lista de íconos */
+.icon-list li::before {
+    font-family: "Font Awesome 6 Free"; /* Fuente de íconos */
+    content: "\f00c"; /* Código del ícono */
+    color: #050505; /* Color del ícono */
+    font-weight: 900; /* Peso de la fuente */
+}
+
+/* Tamaño de los íconos */
+.fas {
+    font-size: 3vw; /* Tamaño del ícono */
+}
+
+/* Animación de desvanecimiento del texto */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilo para el párrafo con animación de máquina de escribir */
