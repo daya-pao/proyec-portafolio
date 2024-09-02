@@ -1,167 +1,84 @@
-/*.services{
-    border: 1px solid red;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    gap: 3vw;
-}
-.services-container{
-    display: flex;
-    flex-direction: column;
-    gap: 4vw;
-}
 
-
-.services-grid{
-    display: flex;
-    justify-content: space-around;
-}
-.service{
-    position: relative;
-    width: 22vw;
-    height: 50vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.service::before{
-    content: " ";
-    position: absolute;
-    width: 50vw;
-    height: 60vh;
-    background-image: conic-gradient(transparent,transparent,
-    transparent,#ff00ae);
-    animation: animate 4s linear infinite;
-    animation-delay: -2s;
-}
-.service::after{
-    content: " ";
-    position: absolute;
-    width: 50vw;
-    height: 60vh;
-    background-image: conic-gradient(transparent,transparent,
-    transparent,#00ccff);
-    animation: animate 4s linear infinite;
-}
-@keyframes animate{
-    0%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
-}
-.service div{
-    position: absolute;
-    inset: 5px;
-    background: #3f3f40;
-    z-index: 1;
-    border-radius: 1vw;
-}
-.service-icon{
-    position: relative; 
-    z-index: 2; 
-    display: flex; 
-    gap: 1vw;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    
-}
-.icon-list li::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f00c"; 
-    color: #050505;
-    font-weight: 900;
-}
-.fas{
-    font-size: 3vw;
-}*/
 
 /* Estilo general del contenedor de servicios */
+
 .services {
-    height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+    position: absolute;
+    left: 15vw;
+    width: 85vw;
+    border: 1px solid green;
+    height: 100vh;
     display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; 
+    justify-content: center; 
 }
 
-/* Estilo del contenedor principal de servicios */
+/* Estilo del contenedor principal de servicios*/
 .services-container {
     display: flex;
     flex-direction: column;
-    gap: 4vw; /* Espacio entre el texto y la cuadrícula de servicios */
-    align-items: center; /* Centra el contenido horizontalmente dentro del contenedor */
+    gap: 4vw; 
+    align-items: center; 
 }
 
 /* Estilo del contenedor de texto */
-.intro-text {
-    max-width: 800px; /* Ancho máximo del contenedor de texto */
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centra el texto */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.1); /* Sombra suave */
-    position: relative; /* Necesario para posicionar el cursor */
-    overflow: hidden; /* Oculta el texto que excede el contenedor */
-    font-size: 1.2vw; /* Tamaño del texto del párrafo */
-    font-family: monospace; /* Fuente monoespaciada para el efecto de máquina de escribir */
-    line-height: 1.5; /* Altura de línea para espaciar el texto */
-    height: 6em; /* Ajusta la altura según sea necesario */
-    white-space: pre-wrap; /* Mantiene los espacios y saltos de línea */
 
-}
 
 /* Estilo para el encabezado */
+
+.intro-text {
+    max-width: 50vw;
+    text-align: center;
+}
+
 .intro-text h2 {
-    font-size: 28px; /* Tamaño del texto del encabezado */
-    margin-bottom: 10px; /* Espacio debajo del encabezado */
-    color: #333; /* Color del texto */
+  font-size: 2vw;
+  color: #333;
+  font-weight: 700;
 }
-
-/* Estilo para el párrafo */
 .intro-text p {
-    font-size: 1.2vw; /* Tamaño del texto del párrafo */
-    line-height: 1.6; /* Altura de línea para mejor legibilidad */
-    color: #8b8888; /* Color del texto */
-    margin: 0; /* Elimina el margen por defecto */
+  font-size: 1.2vw;
+  color: #666;
 }
 
-/* Estilo de la cuadrícula de servicios */
+
+
+/* Estilo de la cuadrícula de servicios*/
 .services-grid {
-    display: flex;
-    gap: 3vw;
-    justify-content: space-around; /* Espacia los elementos dentro de la cuadrícula */
-    width: 100%; /* Ocupa todo el ancho disponible */
-}
+  display: flex;
+  gap: 2vw;
+
+} 
 
 /* Estilo de cada servicio */
 .service {
     position: relative;
-    width: 22vw; /* Ancho del servicio */
-    height: 50vh; /* Altura del servicio */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad */
-    border-radius: 1vw; /* Bordes redondeados */
+    width: 19vw; 
+    height: 50vh; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 1vw; 
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    overflow: hidden; /* Oculta el contenido desbordado */
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
 }
 
-/* Estilo de la animación de los servicios */
+/* Estilo de la animación de los servicios*/
 .service::before {
     content: " ";
     position: absolute;
-    width: 50vw; /* Ancho del fondo animado */
-    height: 60vh; /* Altura del fondo animado */
+    width: 50vw;
+    height: 60vh; 
     background-image: conic-gradient(transparent, transparent, transparent, #ff00ae);
     animation: animate 4s linear infinite;
     animation-delay: -2s;
-}
+} 
 
 .service::after {
     content: " ";
     position: absolute;
-    width: 50vw; /* Ancho del fondo animado */
-    height: 60vh; /* Altura del fondo animado */
+    width: 50vw; 
+    height: 60vh; 
     background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
     animation: animate 4s linear infinite;
 }
@@ -174,18 +91,19 @@
 /* Estilo interno del servicio */
 .service div {
     position: absolute;
-    inset: 5px;
-    background: #3f3f40; /* Fondo interno del servicio */
-    z-index: 1; /* Asegura que el contenido esté sobre el fondo animado */
-    border-radius: 1vw; /* Bordes redondeados internos */
+    inset: 0.3vw;
+    background: #3f3f40; 
+    z-index: 1; 
+    border-radius: 1vw;
 }
 
-/* Estilo del ícono del servicio */
+/* Estilo del ícono del servicio*/
 .service-icon {
     position: relative;
-    z-index: 2; /* Asegura que el ícono esté sobre el fondo animado */
+    z-index: 2;
     display: flex;
-    gap: 1vw; /* Espacio entre los elementos internos */
+    gap: 1vw; 
+    font-size: 1vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -193,21 +111,190 @@
 
 /* Estilo de la lista de íconos */
 .icon-list li::before {
-    font-family: "Font Awesome 6 Free"; /* Fuente de íconos */
-    content: "\f00c"; /* Código del ícono */
-    color: #050505; /* Color del ícono */
-    font-weight: 900; /* Peso de la fuente */
+    font-family: "Font Awesome 6 Free"; 
+    content: "\f00c";
+    color: #050505;
+    font-weight: 900; 
 }
 
 /* Tamaño de los íconos */
 .fas {
-    font-size: 3vw; /* Tamaño del ícono */
+    font-size: 3vw;
 }
 
-/* Animación de desvanecimiento del texto */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo general del contenedor de servicios 
+
+.services {
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}*/
+
+/* Estilo del contenedor principal de servicios
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw; 
+    align-items: center; 
+}*/
+
+/* Estilo del contenedor de texto 
+.intro-text {
+    max-width: 800px;
+    padding: 20px; 
+    text-align: center; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.1); 
+    position: relative; 
+    overflow: hidden;
+    font-size: 1.2vw; 
+    font-family: monospace; 
+    line-height: 1.5; 
+    height: 6em; 
+    white-space: pre-wrap; 
+
+}*/
+
+/* Estilo para el encabezado 
+.intro-text h2 {
+    font-size: 28px; 
+    margin-bottom: 10px; 
+    color: #333;
+}*/
+
+/* Estilo para el párrafo
+.intro-text p {
+    font-size: 1.2vw; 
+    line-height: 1.6; 
+    color: #8b8888; 
+    margin: 0; 
+} */
+
+/* Estilo de la cuadrícula de servicios
+.services-grid {
+    display: flex;
+    gap: 3vw;
+    justify-content: space-around; 
+    width: 100%; 
+} */
+
+/* Estilo de cada servicio 
+.service {
+    position: relative;
+    width: 22vw; 
+    height: 50vh; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 1vw; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+}*/
+
+/* Estilo de la animación de los servicios
+.service::before {
+    content: " ";
+    position: absolute;
+    width: 50vw;
+    height: 60vh; 
+    background-image: conic-gradient(transparent, transparent, transparent, #ff00ae);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+} */
+
+/*.service::after {
+    content: " ";
+    position: absolute;
+    width: 50vw; 
+    height: 60vh; 
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: animate 4s linear infinite;
 }
 
-/* Estilo para el párrafo con animación de máquina de escribir */
+@keyframes animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}*/
+
+/* Estilo interno del servicio 
+.service div {
+    position: absolute;
+    inset: 5px;
+    background: #3f3f40; 
+    z-index: 1; 
+    border-radius: 1vw;
+}*/
+
+/* Estilo del ícono del servicio
+.service-icon {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 1vw; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}*/
+
+/* Estilo de la lista de íconos 
+.icon-list li::before {
+    font-family: "Font Awesome 6 Free"; 
+    content: "\f00c";
+    color: #050505;
+    font-weight: 900; 
+}*/
+
+/* Tamaño de los íconos 
+.fas {
+    font-size: 3vw;
+}*/
+
+
+

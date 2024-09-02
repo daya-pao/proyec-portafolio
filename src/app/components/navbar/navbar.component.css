@@ -1,6 +1,6 @@
 
 /* ---------------paleta de colores ----------------*/
-.peleta__colores{
+/*.peleta__colores{
     border: 1px solid red;
     max-height: 11rem;
 }
@@ -61,7 +61,7 @@
 /*-------------------- paleta de colores ------------------*/
 
 /* -------------------custom  navbar-----------------------*/
-.header {
+/*.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -101,4 +101,19 @@
 #icon_palette {
     font-size: 3vw;
     color: white;
+}*/
+
+
+/*------------------------------------------*/
+.header_aside{
+    width: 15vw;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
+
+
+
