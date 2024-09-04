@@ -1,7 +1,7 @@
 
+
 .section_home{
-    border: 1px solid gold;
-    padding: 6vw 4vw 4vw 4vw;
+    padding: 10vw 4vw 4vw 4vw;
     height: 100vh;
     width: 85vw;
     position: absolute;
@@ -11,10 +11,9 @@
     justify-content: space-evenly;
 }
 .home_content {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 2vw;
     flex: 1;
     max-width: 45vw;
     margin-right: 2vw;
@@ -25,9 +24,19 @@
     font-weight: 700;
     line-height: 0.3;
 }
-.home_content .home_nombre {
-    font-size: 3.6vw;
+.home_content .home_titulo span{
+    font-family: 'Clicker Script', cursive;
+    font-size: 3vw;
     font-weight: 700;
+    color: red;
+}
+
+.home_content .home_developer{
+    font-size: 2vw;
+    font-weight: 700;
+}
+.home_content .home_developer .stypin{
+    color: red;
 }
 .home_content .home_info {
     font-size: 1.5vw;
@@ -43,33 +52,33 @@
     width: 4vw;
     height: 4vw;
     background: transparent;
-    border: 0.2vw solid green;
+    border: 0.2vw solid black;
     border-radius: 50%;
     font-size: 2vw;
-    color: aqua;
+    color: red;
     /*transition: 0.5s ease;*/
 }
 .btn {
     width: 18vw;
     height: 10vh;
     display: inline-block;
-    background: rgb(96, 96, 128);
+    background: rgb(18, 18, 19);
     border-radius: 0.6vw;
     /*box-shadow: 0 0.2rem 0.5rem red;*/
     font-size: 1.4vw;
-    color: white;
+    color: rgb(245, 8, 8);
     border: 0.2vw solid transparent;
     letter-spacing: 0.2vw;
     font-weight: 600;
     text-align: center;
     padding-top: 1vw;
+    
    
 }
 
-
 /*------CUBE------*/
 .container {
-    border: 1px solid red;
+
     perspective: 1000vw; 
     width: 20vw; 
     height: 20vw; 
@@ -89,7 +98,7 @@
     text-align: center;
     font-size: 2vw;
     font-weight: bold;
-    background: linear-gradient(#1515159c,#00ec00e0);
+    background: linear-gradient(#f205059c,#151515);
     transition: opacity 0.5s; 
     animation: neon-border 1.5s infinite alternate-reverse;
 }
@@ -124,7 +133,7 @@
 
 @keyframes neon-border {
     0%, 100% {
-        box-shadow: 0 0 10px #00ff0082, 0 0 9px #00ff0082, 0 0 9px #00ff00, 0 0 8px #00ff00, 0 0 5px #00ff00, 0 0 3px #00ff00, 0 0 5px #00ff00, 0 0 4px #00ff00;
+        box-shadow: 0 0 10px#ff0202fb, 0 0 9px #ff0000da, 0 0 #ff0202fb, 0 0 8px #ff0202fb, 0 0 5px #ff0202fb, 0 0 3px #ff0202fb, 0 0 5px #ff0202fb, 0 0 4px #ff0202fb;
     }
     50% {
         box-shadow: none;
