@@ -23,23 +23,29 @@
     font-size: 2.2vw;
     font-weight: 700;
     line-height: 0.3;
+    color: var(--TMPtext-color);
 }
 .home_content .home_titulo span{
     font-family: 'Clicker Script', cursive;
     font-size: 3vw;
     font-weight: 700;
-    color: red;
+    color: var(--TMPborder-color);
+    
 }
 
 .home_content .home_developer{
     font-size: 2vw;
     font-weight: 700;
+    color:var(--TMPtext-color);
+
 }
 .home_content .home_developer .stypin{
-    color: red;
+    color: var(--TMPborder-color);
 }
 .home_content .home_info {
     font-size: 1.5vw;
+    color: var(--TMPtext-color);
+
 }
 .home_content .social_media{
     display: flex;
@@ -52,21 +58,21 @@
     width: 4vw;
     height: 4vw;
     background: transparent;
-    border: 0.2vw solid black;
+    border: 0.2vw solid var(--TMPtext-color);
     border-radius: 50%;
     font-size: 2vw;
-    color: red;
+    color: var(--TMPborder-color);
     /*transition: 0.5s ease;*/
 }
 .btn {
     width: 18vw;
     height: 10vh;
     display: inline-block;
-    background: rgb(18, 18, 19);
+    background:var(--TMPtext-color);
     border-radius: 0.6vw;
     /*box-shadow: 0 0.2rem 0.5rem red;*/
     font-size: 1.4vw;
-    color: rgb(245, 8, 8);
+    color:  var(--TMPborder-color);
     border: 0.2vw solid transparent;
     letter-spacing: 0.2vw;
     font-weight: 600;
@@ -98,7 +104,7 @@
     text-align: center;
     font-size: 2vw;
     font-weight: bold;
-    background: linear-gradient(#f205059c,#151515);
+    background: linear-gradient( var(--TMPborder-color),var(--TMPtext-color));
     transition: opacity 0.5s; 
     animation: neon-border 1.5s infinite alternate-reverse;
 }
@@ -133,7 +139,7 @@
 
 @keyframes neon-border {
     0%, 100% {
-        box-shadow: 0 0 10px#ff0202fb, 0 0 9px #ff0000da, 0 0 #ff0202fb, 0 0 8px #ff0202fb, 0 0 5px #ff0202fb, 0 0 3px #ff0202fb, 0 0 5px #ff0202fb, 0 0 4px #ff0202fb;
+        box-shadow: 0 0 10px var(--TMPborder-color), 0 0 9px var(--TMPborder-color), 0 0 var(--TMPborder-color), 0 0 8px var(--TMPborder-color), 0 0 5px var(--TMPborder-color), 0 0 3px  var(--TMPborder-color), 0 0 5px var(--TMPborder-color), 0 0 4px var(--TMPborder-color);
     }
     50% {
         box-shadow: none;

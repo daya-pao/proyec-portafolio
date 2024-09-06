@@ -108,7 +108,7 @@
 .header_aside{
     width: 15vw;
     height: 100vh;
-    background:  #1c1c24;
+    background:  var(--Navbackground-color);
     position: fixed;
     left: 0;
     padding: 2vw;
@@ -127,7 +127,7 @@
     text-transform: capitalize;
 }
 .header_aside .logo a{
-    color: black;
+    color: var(--TMPtext-color);
     font-weight: 700;
     padding: 1vw 2vw;
     font-size: 2vw;
@@ -143,8 +143,8 @@
     position: absolute;
     width: 1vw;
     height: 1vw;
-    border-bottom: 0.4vw solid red;
-    border-left: 0.4vw solid red;
+    border-bottom: 0.4vw solid var(--TMPborder-color);
+    border-left: 0.4vw solid  var(--TMPborder-color);
     bottom: 0;
     left: 0;
 }
@@ -153,8 +153,8 @@
     position: absolute;
     width: 1vw;
     height: 1vw;
-    border-top: 0.4vw solid var(--border-color);
-    border-right: 0.4vw solid red;
+    border-top: 0.4vw solid  var(--TMPborder-color);
+    border-right: 0.4vw solid  var(--TMPborder-color);
     top: 0;
     right: 0;
 
@@ -173,12 +173,12 @@
     font-size: 1vw;
     font-weight: 600;
     display: block;
-    color: rgb(0, 0, 0);
+    color: var(--TMPtext-color);
     padding: 0.6vw 1vw;
-    border-bottom: 0.1vw solid black;
+    border-bottom: 0.1vw solid var(--border-bottom);
 }
 .header_aside .navbar li a.active{
-    color: red;
+    color: var(--TMPborder-color);
 }
 .header_aside .navbar li a i{
     margin-right: 1vw;

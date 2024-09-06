@@ -1,10 +1,9 @@
 
 .contact{
-
     height: 100vh;
+    padding: 5vw;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 85vw;
     height: 100vh;
@@ -12,6 +11,35 @@
     left: 15vw
    
 }
+.contact h2{
+    position: absolute;
+    top:4vw;
+    left: 1;
+    font-size:3vw ;
+    font-weight: 400;
+    color: #01dbc2;
+
+}
+.contact h2::before{
+    content: " ";
+    height: 0.4vw;
+    width: 4vw;
+    background-color: #1a1e2a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+}
+.contact h2::after{
+    content: " ";
+    height: 0.4vw;
+    width: 2vw;
+    background-color: #1a1e2a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 1vw;
+  }
 .container{
     width: 70vw;
     display: flex;
@@ -24,6 +52,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    margin-top: 2vw;
 }
 .container .contactInfo .box{
     display: flex;
@@ -117,7 +146,7 @@
     position: absolute;
     inset: 2px;
     border: 20px solid #252432;
-    background: #333338;
+    background:#4e4e58;
 }
 
 @property --a{
@@ -135,7 +164,7 @@
     z-index: 10;
     height: 70vh;
 }
-.container .contactForm form h2{
+.container .contactForm form h3{
     font-size: 2vw;
     color: #fff;
     padding: 10px ;

@@ -4,12 +4,13 @@
     </div>
 
     <nav class="navbar">
-        <li><a href="" class="link active"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="" class="link"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="" class="link"><i class='fas fa-list-ul'></i> Services</a></li>
-        <li><a href="" class="link"><i class="fas fa-briefcase"></i> Portafolio</a></li>
-        <li><a href="" class="link"><i class="fas fa-envelope"></i> Contact</a></li>
-        <li><a href="" class="link"><i class="bx bx-paint-roll" id="icon_palette"></i>Temas</a></li>
+        <li><a routerLink="/Home"  routerLinkActive="active"  class="link active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a routerLink="/Skills"   class="link"><i class="fas fa-wrench"></i>Skills</a></li>
+        <li><a routerLink="/Services"   class="link"><i class='fas fa-list-ul'></i>Servicios</a></li>
+        <li><a routerLink="/Portafolio"  class="link"><i class="fas fa-briefcase"></i>Portafolio</a></li>
+        <li><a routerLink="/Contact"   class="link"><i class="fas fa-envelope"></i>Contact</a></li>
+        <li><a routerLink="/Home"   class="link"><i class="bx bx-paint-roll" id="icon_palette"></i>Temas</a></li>
     </nav>
     
 </header>
+<router-outlet />
