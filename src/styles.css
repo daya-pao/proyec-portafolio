@@ -5,12 +5,14 @@
 
 
 :root {
+    
     /*Tema #1*/
-    --TMPbackground-color:#2f2e37; /* Fondo contenido */
-    --TMPborder-color: #ff0000;/*texto rojo*/
-    --TMPtext-color: #000000; /* Texto negro */
-    --Navbackground-color: #1c1c24;/*Fondo navbar*/
-    --border-bottom: #8c8c91 /*borde nava*/
+    --background-color:#4e4e58 ;/* Fondo contenido */
+    --background-color-navbar:  #1a1e2a;/*Fondo navbar*/
+    --border-color: #252432;/*texto rojo*/
+    --text-color: #01dbc2 ; /* Texto negro */
+    --text-active: #ffffff; /*texto active*/
+    --border-bottom: #8c8c8c /*borde nava*/
 }
 
 
@@ -22,6 +24,7 @@
     border: none;
     outline: none;
     list-style: none;
+    user-select:none ;
     scroll-behavior: smooth;
     font-family:'Poppins' sans-serif;
 }
@@ -33,7 +36,7 @@ html {
 }
 
 body {
-    background-color:var(--TMPbackground-color);
+    background-color:var(--background-color);
     margin: 0;
     padding: 0;
     margin-left: var(--width-collaspsed);
@@ -48,12 +51,4 @@ body {
     --text-active: #ffffff; /*texto active*/
     --background-color: #41414e;/*Fondo navbar*/
     --border-bottom: #8c8c91 /*borde nava*/
-}
-:root{
-    --background-color: #0c0c0d;/* Fondo contenido */
-    --border-color:  #ed097f;/*texto rojo*/
-    --text-color: #01dbc2 ; /* Texto negro */
-    --text-active: #ffffff; /*texto active*/
-    --background-color: #18181a;/*Fondo navbar*/
-    --border-bottom: #8c8c91; /*borde nava*/
 }

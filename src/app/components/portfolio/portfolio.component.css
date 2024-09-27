@@ -1,0 +1,41 @@
+.portafolio{
+    height: 100vh;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 85vw;
+    height: 100vh;
+    position: absolute;
+    left: 15vw
+   
+}
+.portafolio h2{
+    position: absolute;
+    top:4vw;
+    left: 1;
+    font-size:3vw ;
+    font-weight: 400;
+    color: #01dbc2;
+
+}
+.portafolio h2::before{
+    content: " ";
+    height: 0.4vw;
+    width: 4vw;
+    background-color: #1a1e2a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+}
+.portafolio h2::after{
+    content: " ";
+    height: 0.4vw;
+    width: 2vw;
+    background-color: #1a1e2a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 1vw;
+  }

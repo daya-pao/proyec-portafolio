@@ -90,7 +90,7 @@
 .container .contactInfo .box .icon i{
     position: relative;
     z-index: 1000;
-    color: #000;
+    color:var(--text-active);
     font-size: 2.2vw;
     margin-top: 1.3vw;
 }

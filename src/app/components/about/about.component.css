@@ -1,6 +1,4 @@
 
-
-
 /*----------about__lenguajes-----------*/
 .about__lenguajes {
   height: 100vh;
@@ -20,12 +18,13 @@
   top:4vw;
   font-size:3vw ;
   font-weight: 400;
+  color: var(--text-color);
 }
 .about__lenguajes h3::before{
   content: " ";
   height: 0.4vw;
   width: 4vw;
-  background-color: red;
+  background-color: var(--border-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -34,7 +33,7 @@
   content: " ";
   height: 0.4vw;
   width: 2vw;
-  background-color: red;
+  background-color:var(--border-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -84,7 +83,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(21,21,25,1), rgba(255,6,6,1));
+  background: linear-gradient(var(--text-color),var(--text-color));
   transform-style: preserve-3d;
   transform: rotateY(calc(90deg * var(--i))) translateZ(2.5vw);
 }
@@ -95,7 +94,7 @@
   left: 0;
   width: 5vw;
   height: 12vh;
-  background-color: #222;
+  background-color:var(--text-color);
   transform-style:preserve-3d;
   transform: rotateX(90deg) translateZ(2.6vw);
   display: flex;
@@ -109,14 +108,14 @@
   left: 0;
   width: 5vw;
   height: 5vw;
-  background: rgba(255,6,6,1);
+  background: var(--text-color);
   transform: translateZ(-3vw);
   opacity: 0.30;
-  box-shadow: 0 0 20px rgba(255,6,6,0.2),
+ /* box-shadow: 0 0 20px var(),
   0 0 20px rgba(255,6,6,0.4),
   0 0 30px rgba(255,6,6,0.5),
   0 0 40px rgba(255,6,6,0.8),
-  0 0 50px rgba(255,6,6,1);
+  0 0 50px rgba(255,6,6,1);*/
 }
 @keyframes animate{
   0%{transform: rotateX(-30deg) rotateY(0deg);}
@@ -126,11 +125,11 @@
 i{
   position: absolute;
   font-size: 5vw;
-  color:rgba(255,6,6,1) ;
-  text-shadow: 0 0 50px rgba(255,6,6,0.25),
-  0 0 100px rgba(255,6,6,0.5),
-  0 0 200px rgba(255,6,6,0.75),
-  0 0 200px rgba(255,6,6,0.1);
+  color:var(--border-color) ;
+  /*text-shadow: 0 0 50px rgba(255,6,6,0.25),
+  0 0 100px rgba(145, 205, 223, 0.5),
+  0 0 200px rgba(180, 231, 224, 0.75),
+  0 0 200px rgba(214, 226, 231, 0.1);*/
 }
 /*----------about__lenguajes-----------*/
 
@@ -149,13 +148,14 @@ i{
 }
 .texto{
   font-size: 1.4vw;
+  color: var(--text-active);
 }
 .icon{
   margin-top:-18vw;
   font-size: 14vw;
   text-align: center;
   margin-left: 3vw;
-  color:rgb(14, 14, 14);
+  color:var(--text-color);
   text-shadow: none;
   border-radius: 50%;
   z-index: 1;
@@ -264,7 +264,7 @@ i{
   width: 20vw;
   height: 45vh;
   border-radius: 50%;
-  color: #fff;
+  color:red ;
   background: conic-gradient(var(--clr) calc(var(--i) * 100%), transparent 0); 
 }
 .card__progress .progress::before{
@@ -280,7 +280,7 @@ i{
 .card__progress .progress::after{
   content: " ";
   position: absolute;
-  background: #222;
+  background:var(--border-color);
   inset: 10px;
   border-radius: 50%;
   
@@ -290,7 +290,7 @@ i{
   top: 16vw;
   left: 10vw;
   transform: translate(-50%, -50%);
-  color: #fff; 
+  color:var(--text-active); 
   font-size: 1rem;
   z-index: 1;
 }

@@ -108,7 +108,7 @@
 .header_aside{
     width: 15vw;
     height: 100vh;
-    background:  var(--Navbackground-color);
+    background: var(--background-color-navbar);
     position: fixed;
     left: 0;
     padding: 2vw;
@@ -127,14 +127,14 @@
     text-transform: capitalize;
 }
 .header_aside .logo a{
-    color: var(--TMPtext-color);
+    color: var(--text-active);
     font-weight: 700;
     padding: 1vw 2vw;
-    font-size: 2vw;
+    font-size: 2.2vw;
     letter-spacing: 1;
 }
 .header_aside a span{
-    font-family:'Clicker Script', cursive;
+    font-family:'Clicker Script',;
     font-family: 40px;
 }
 
@@ -143,8 +143,8 @@
     position: absolute;
     width: 1vw;
     height: 1vw;
-    border-bottom: 0.4vw solid var(--TMPborder-color);
-    border-left: 0.4vw solid  var(--TMPborder-color);
+    border-bottom: 0.4vw solid var(--text-color);
+    border-left: 0.4vw solid  var(--text-color);
     bottom: 0;
     left: 0;
 }
@@ -153,35 +153,38 @@
     position: absolute;
     width: 1vw;
     height: 1vw;
-    border-top: 0.4vw solid  var(--TMPborder-color);
-    border-right: 0.4vw solid  var(--TMPborder-color);
+    border-top: 0.4vw solid  var(--text-color);
+    border-right: 0.4vw solid  var(--text-color);
     top: 0;
     right: 0;
 
 }
-
 .header_aside  .navbar{
     display: flex;
+    margin-top: 6vw;
     flex-direction: column;
 
 }
 .header_aside  .navbar li{
-    margin-bottom: 1vw;
+    margin-bottom: 1.3vw;
     display: block;
 }
 .header_aside .navbar li a {
-    font-size: 1vw;
+    font-size: 1.4vw;
     font-weight: 600;
     display: block;
-    color: var(--TMPtext-color);
+    color: var(--text-active);
     padding: 0.6vw 1vw;
-    border-bottom: 0.1vw solid var(--border-bottom);
+    border-bottom: 0.1vw solid var(--text-color);
 }
 .header_aside .navbar li a.active{
-    color: var(--TMPborder-color);
+    color: var(--text-color);
 }
 .header_aside .navbar li a i{
     margin-right: 1vw;
+}
+#icon_palette{
+    font-size: 2vw;
 }
 
 

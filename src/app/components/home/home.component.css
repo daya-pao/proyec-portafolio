@@ -23,28 +23,28 @@
     font-size: 2.2vw;
     font-weight: 700;
     line-height: 0.3;
-    color: var(--TMPtext-color);
+    color: var(--text-active);
 }
 .home_content .home_titulo span{
     font-family: 'Clicker Script', cursive;
     font-size: 3vw;
     font-weight: 700;
-    color: var(--TMPborder-color);
+    color: var(--text-color );
     
 }
 
 .home_content .home_developer{
     font-size: 2vw;
     font-weight: 700;
-    color:var(--TMPtext-color);
+    color:var(--text-active);
 
 }
 .home_content .home_developer .stypin{
-    color: var(--TMPborder-color);
+    color: var(--text-color);
 }
 .home_content .home_info {
     font-size: 1.5vw;
-    color: var(--TMPtext-color);
+    color: var(--text-active);
 
 }
 .home_content .social_media{
@@ -58,21 +58,21 @@
     width: 4vw;
     height: 4vw;
     background: transparent;
-    border: 0.2vw solid var(--TMPtext-color);
+    border: 0.2vw solid var(--text-active);
     border-radius: 50%;
     font-size: 2vw;
-    color: var(--TMPborder-color);
+    color: var(--text-color);
     /*transition: 0.5s ease;*/
 }
 .btn {
     width: 18vw;
     height: 10vh;
     display: inline-block;
-    background:var(--TMPtext-color);
+    background:var( --border-color);
     border-radius: 0.6vw;
     /*box-shadow: 0 0.2rem 0.5rem red;*/
     font-size: 1.4vw;
-    color:  var(--TMPborder-color);
+    color: var(--text-color);
     border: 0.2vw solid transparent;
     letter-spacing: 0.2vw;
     font-weight: 600;
@@ -92,6 +92,7 @@
 .cube {
     width: 20vw;
     height: 20vw;
+    color: var(--text-active);
     position: relative;
     transform-style: preserve-3d;
     animation: rotate 10s infinite linear;
@@ -104,7 +105,7 @@
     text-align: center;
     font-size: 2vw;
     font-weight: bold;
-    background: linear-gradient( var(--TMPborder-color),var(--TMPtext-color));
+    background: linear-gradient( var(--text-color),var(--border-color));
     transition: opacity 0.5s; 
     animation: neon-border 1.5s infinite alternate-reverse;
 }
@@ -139,11 +140,12 @@
 
 @keyframes neon-border {
     0%, 100% {
-        box-shadow: 0 0 10px var(--TMPborder-color), 0 0 9px var(--TMPborder-color), 0 0 var(--TMPborder-color), 0 0 8px var(--TMPborder-color), 0 0 5px var(--TMPborder-color), 0 0 3px  var(--TMPborder-color), 0 0 5px var(--TMPborder-color), 0 0 4px var(--TMPborder-color);
+        box-shadow: 0 0 10px var(--text-color), 0 0 9px var(--text-color), 0 0 var(--text-color), 0 0 8px var(--text-color), 0 0 5px var(--text-color), 0 0 3px  var(--text-color), 0 0 5px var(--text-color), 0 0 4px var(--text-color);
     }
     50% {
         box-shadow: none;
     }
+
 }
 
 

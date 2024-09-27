@@ -14,7 +14,7 @@
 .services h3{
     position: absolute;
     top:4vw;
-    color: #dbd6d6;
+    color: var(--text-color);
     font-size:3vw ;
     font-weight: 400;
 }
@@ -22,7 +22,7 @@
   content: " ";
   height: 0.4vw;
   width: 4vw;
-  background-color: #ed097f;
+  background-color:var(--border-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -32,7 +32,7 @@
   content: " ";
   height: 0.4vw;
   width: 2vw;
-  background-color:  #ed097f;
+  background-color:var(--border-color);
   position: absolute;
   top: 100%;
   left: 0;
@@ -61,12 +61,12 @@
 
 .intro-text h2 {
   font-size: 2vw;
-  color: #333;
+  color: #d43030;
   font-weight: 700;
 }
 .intro-text p {
   font-size: 1.2vw;
-  color:  #ffffff;
+  color:var(--text-active);
 }
 
 
@@ -98,7 +98,7 @@
     position: absolute;
     width: 50vw;
     height: 60vh; 
-    background-image: conic-gradient(transparent, transparent, transparent, #ff00ae);
+    background-image: conic-gradient(transparent, transparent, transparent, var(--text-color));
     animation: animate 4s linear infinite;
     animation-delay: -2s;
 } 
@@ -108,7 +108,7 @@
     position: absolute;
     width: 50vw; 
     height: 60vh; 
-    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    background-image: conic-gradient(transparent, transparent, transparent, var(--text-active));
     animation: animate 4s linear infinite;
 }
 
@@ -121,7 +121,7 @@
 .service div {
     position: absolute;
     inset: 0.3vw;
-    background: #3f3f40; 
+    background: var(--border-color); 
     z-index: 1; 
     border-radius: 1vw;
 }
@@ -132,17 +132,20 @@
     z-index: 2;
     display: flex;
     gap: 1vw; 
+    color: var(--text-active);
     font-size: 1vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+i{
+    color: var(--text-color);
+}
 /* Estilo de la lista de íconos */
 .icon-list li::before {
     font-family: "Font Awesome 6 Free"; 
     content: "\f00c";
-    color: #050505;
+    color: var(--text-color);
     font-weight: 900; 
 }
 
