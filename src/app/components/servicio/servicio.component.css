@@ -1,332 +1,192 @@
-
-
-/* Estilo general del contenedor de servicios */
+/* ===== CONTENEDOR PRINCIPAL ===== */
 
 .services {
-    position: absolute;
-    left: 15vw;
-    width: 85vw;
-    height: 100vh;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-.services h3{
-    position: absolute;
-    top:4vw;
-    color: var(--text-color);
-    font-size:3vw ;
-    font-weight: 400;
-}
-.services h3::before{
-  content: " ";
-  height: 0.4vw;
-  width: 4vw;
-  background-color:var(--border-color);
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-}
-.services h3::after{
-  content: " ";
-  height: 0.4vw;
-  width: 2vw;
-  background-color:var(--border-color);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 1vw;
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* ===== CONTENEDOR GENERAL ===== */
 
-/* Estilo del contenedor principal de servicios*/
 .services-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2vw;
-    align-items: center; 
+
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Estilo del contenedor de texto */
-
-
-/* Estilo para el encabezado */
+/* ===== BLOQUE TITULO + TEXTO ===== */
 
 .intro-text {
-    max-width: 50vw;
-    text-align: center;
-    
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 29px;
 }
 
-.intro-text h2 {
-  font-size: 2vw;
-  color: #d43030;
-  font-weight: 700;
+/* titulo */
+
+.intro-text h3 {
+    position: relative;
+    color: var(--text-color);
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin-top: 15px;   /* ← ajusta este valor */
+    margin-bottom: 25px;
 }
-.intro-text p {
-  font-size: 1.2vw;
-  color:var(--text-active);
+.intro-text h3::before{
+    content: "";
+    height: 6px;
+    width: 60px;
+    background-color: var(--border-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.intro-text h3::after{
+    content: "";
+    height: 6px;
+    width: 30px;
+    background-color: var(--border-color);
+    position: absolute;
+    top: 125%;
+    left: 0;
 }
 
+/* texto */
+
+.intro-text .game-text {
+  max-width: 600px;
+  font-size: clamp(14px, 1.2vw, 18px);
+  color: var(--text-active);
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
 
 
-/* Estilo de la cuadrícula de servicios*/
+  animation: gameFade 1.5s ease-out forwards;
+
+  text-shadow:
+    0 0 4px var(--text-color),
+    0 0 8px rgba(0,255,255,0.3);
+
+}
+
+@keyframes gameFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== GRID TARJETAS ===== */
+
 .services-grid {
   display: flex;
-  gap: 2vw;
-  margin-top: 4vw;
-
-} 
-
-/* Estilo de cada servicio */
-.service {
-    position: relative;
-    width: 19vw; 
-    height: 50vh; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 1vw; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    overflow: hidden; 
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
-/* Estilo de la animación de los servicios*/
+/* ===== TARJETAS ===== */
+
+.service {
+  position: relative;
+  width: 290px;
+  height: 360px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* animación borde */
+
+.service::before,
+.service::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  animation: rotate 5s linear infinite;
+}
+
 .service::before {
-    content: " ";
-    position: absolute;
-    width: 50vw;
-    height: 60vh; 
-    background-image: conic-gradient(transparent, transparent, transparent, var(--text-color));
-    animation: animate 4s linear infinite;
-    animation-delay: -2s;
-} 
+  background: conic-gradient(transparent, var(--text-color));
+}
 
 .service::after {
-    content: " ";
-    position: absolute;
-    width: 50vw; 
-    height: 60vh; 
-    background-image: conic-gradient(transparent, transparent, transparent, var(--text-active));
-    animation: animate 4s linear infinite;
+  background: conic-gradient(transparent, var(--text-active));
+  animation-delay: -2.5s;
 }
 
-@keyframes animate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes rotate {
+  to { transform: rotate(360deg); }
 }
 
-/* Estilo interno del servicio */
-.service div {
-    position: absolute;
-    inset: 0.3vw;
-    background: var(--border-color); 
-    z-index: 1; 
-    border-radius: 1vw;
+/* interior */
+
+.service > div {
+  position: absolute;
+  inset: 4px;
+  background: var(--border-color);
+  border-radius: 14px;
+  z-index: 1;
 }
 
-/* Estilo del ícono del servicio*/
+/* contenido */
+
 .service-icon {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    gap: 1vw; 
-    color: var(--text-active);
-    font-size: 1vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text-active);
 }
-i{
-    color: var(--text-color);
+
+.service-icon i {
+  font-size: 42px;
+  color: var(--text-color);
 }
-/* Estilo de la lista de íconos */
+
+/* lista */
+
+.icon-list {
+  padding: 0;
+  list-style: none;
+}
+
 .icon-list li::before {
-    font-family: "Font Awesome 6 Free"; 
-    content: "\f00c";
-    color: var(--text-color);
-    font-weight: 900; 
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  color: var(--text-color);
+  font-weight: 900;
+  margin-right: 8px;
 }
 
-/* Tamaño de los íconos */
-.fas {
-    font-size: 3vw;
-}
+/* ===== RESPONSIVE ===== */
 
+@media (max-width: 900px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilo general del contenedor de servicios 
-
-.services {
-    height: 100vh;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}*/
-
-/* Estilo del contenedor principal de servicios
-.services-container {
-    display: flex;
+  .intro-text {
     flex-direction: column;
-    gap: 4vw; 
-    align-items: center; 
-}*/
+  }
 
-/* Estilo del contenedor de texto 
-.intro-text {
-    max-width: 800px;
-    padding: 20px; 
-    text-align: center; 
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.1); 
-    position: relative; 
-    overflow: hidden;
-    font-size: 1.2vw; 
-    font-family: monospace; 
-    line-height: 1.5; 
-    height: 6em; 
-    white-space: pre-wrap; 
-
-}*/
-
-/* Estilo para el encabezado 
-.intro-text h2 {
-    font-size: 28px; 
-    margin-bottom: 10px; 
-    color: #333;
-}*/
-
-/* Estilo para el párrafo
-.intro-text p {
-    font-size: 1.2vw; 
-    line-height: 1.6; 
-    color: #8b8888; 
-    margin: 0; 
-} */
-
-/* Estilo de la cuadrícula de servicios
-.services-grid {
-    display: flex;
-    gap: 3vw;
-    justify-content: space-around; 
-    width: 100%; 
-} */
-
-/* Estilo de cada servicio 
-.service {
-    position: relative;
-    width: 22vw; 
-    height: 50vh; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 1vw; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    overflow: hidden; 
-}*/
-
-/* Estilo de la animación de los servicios
-.service::before {
-    content: " ";
-    position: absolute;
-    width: 50vw;
-    height: 60vh; 
-    background-image: conic-gradient(transparent, transparent, transparent, #ff00ae);
-    animation: animate 4s linear infinite;
-    animation-delay: -2s;
-} */
-
-/*.service::after {
-    content: " ";
-    position: absolute;
-    width: 50vw; 
-    height: 60vh; 
-    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
-    animation: animate 4s linear infinite;
-}
-
-@keyframes animate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}*/
-
-/* Estilo interno del servicio 
-.service div {
-    position: absolute;
-    inset: 5px;
-    background: #3f3f40; 
-    z-index: 1; 
-    border-radius: 1vw;
-}*/
-
-/* Estilo del ícono del servicio
-.service-icon {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    gap: 1vw; 
-    flex-direction: column;
+  .services-grid {
     justify-content: center;
-    align-items: center;
-}*/
+  }
 
-/* Estilo de la lista de íconos 
-.icon-list li::before {
-    font-family: "Font Awesome 6 Free"; 
-    content: "\f00c";
-    color: #050505;
-    font-weight: 900; 
-}*/
-
-/* Tamaño de los íconos 
-.fas {
-    font-size: 3vw;
-}*/
-
-
-
+}

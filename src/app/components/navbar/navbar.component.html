@@ -1,15 +1,40 @@
-<header class="header_aside">
-    <div class="logo">
-        <a href="#" class="logo__a"> <span>D</span>ayana</a>
-    </div>
+<nav class="navbar">
 
-    <nav class="navbar">
-        <li><a routerLink="/Home"  routerLinkActive="active"  class="link active"><i class="fas fa-home"></i><span>Home</span> </a></li>
-        <li><a routerLink="/Skills"   class="link"><i class="fas fa-wrench"></i><span>Skills</span></a></li>
-        <li><a routerLink="/Services"   class="link"><i class='fas fa-list-ul'></i><span>Servicios</span></a></li>
-        <li><a routerLink="/Portafolio"  class="link"><i class="fas fa-briefcase"></i> <span>Portafolio</span></a></li>
-        <li><a routerLink="/Contact"   class="link"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-        <li><a routerLink="/Home"   class="link"><i class="bx bx-paint-roll" id="icon_palette"></i> <span>Temas</span></a></li>
-    </nav>
+  <a routerLink="/Home"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }"
+     class="icon">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <a routerLink="/Skills"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }"
+     class="icon">
+    <i class="fas fa-wrench"></i>
+  </a>
+
+  <a routerLink="/Services"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }"
+     class="icon">
+    <i class="fas fa-list-ul"></i>
+  </a>
+
+  <a routerLink="/Contact"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }"
+     class="icon">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+</nav>
+
+
+
+
+
+
     
-
+    
+    

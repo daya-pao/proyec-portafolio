@@ -1,190 +1,38 @@
+.navbar{
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  padding: 12px 28px;
+  border-radius: 40px;
 
-/* ---------------paleta de colores ----------------*/
-/*.peleta__colores{
-    border: 1px solid red;
-    max-height: 11rem;
-}
-.tema_titulo{
-    font-size: 1em;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 2rem 1.5rem 0;
-}
-.tema_lista{
-    border: 1px solid gold;
-    display: block;
-    width: 100%;
-    white-space: nowrap;
-    overflow-y: hidden;
-    overflow-x: auto;
-    text-align: center;
-    padding: 1rem 1.5rem 2rem;
-}
-.tema_item{
-    display: inline-block;
-    position: relative;
-    border-radius: 0.5em;
-    transform: scale(1);
-    transition: transform .2s cubic-bezier(.4, 0, .2, 1);
-}
-.tema_btn{
-    display: block;
-    padding: 1em;
-    border-radius: 0.5em;
-    border: 1px solid black;
-    width: 100%;
-    text-align: center;
-    background-color: red;
-}
-.tema_nombre{
-    display: block;
-    color: white;
-}
-.tema_paleta{
-    display: block;
-    padding: 0.125em 0;
-}
-.tema_bg{
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 50%;
-    white-space: nowrap;
-    text-indent: 100%;
-    text-align: left;
-    overflow: hidden;
-    vertical-align: bottom;
-    box-shadow: 0 0 0 2px #fff;
-}
-/*-------------------- paleta de colores ------------------*/
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 
-/* -------------------custom  navbar-----------------------*/
-/*.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    padding: 2vw 2vw;
-    display: flex;
-    align-items: center;
-    z-index: 100;
+  z-index: 1000;
 }
 
-.logo {
-    font-size: 2vw;
-    color: white;
-    font-weight: 600;
-    cursor: default;
-    margin-right: auto;
+.icon {
+  color: #777;
+  font-size: 28px;
+  transition: all 0.3s ease;
 }
 
-.navbar .link {
-    position: relative;
-    font-size: 2vw;
-    color: white;
-    font-weight: 500;
-    margin-right: 3.5vw;
+.icon:hover {
+  transform: translateY(-5px);
+  color: white;
 }
 
-.navbar .link.active::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 6vw;
-    bottom: 1px;
-    height: 0.2vw;
-    background: blue;
-}
-
-#icon_palette {
-    font-size: 3vw;
-    color: white;
-}*/
-
-
-/*------------------------------------------*/
-.header_aside{
-    width: 15vw;
-    height: 100vh;
-    background: var(--background-color-navbar);
-    position: fixed;
-    left: 0;
-    padding: 2vw;
-    top: 0;
-    border-right: 0.1vw solid rgb(25, 23, 23);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.header_aside .logo{
-    position: absolute;
-    top: 2vw;
-    font-size: 2vw;
-    text-transform: capitalize;
-}
-.header_aside .logo a{
-    color: var(--text-active);
-    font-weight: 700;
-    padding: 1vw 2vw;
-    font-size: 2.2vw;
-    letter-spacing: 1;
-}
-.header_aside a span{
-    font-family:'Clicker Script',;
-    font-family: 40px;
-}
-
-.header_aside .logo a::before{
-    content: " ";
-    position: absolute;
-    width: 1vw;
-    height: 1vw;
-    border-bottom: 0.4vw solid var(--text-color);
-    border-left: 0.4vw solid  var(--text-color);
-    bottom: 0;
-    left: 0;
-}
-.header_aside .logo a::after{
-    content: " ";
-    position: absolute;
-    width: 1vw;
-    height: 1vw;
-    border-top: 0.4vw solid  var(--text-color);
-    border-right: 0.4vw solid  var(--text-color);
-    top: 0;
-    right: 0;
-
-}
-.header_aside  .navbar{
-    display: flex;
-    margin-top: 6vw;
-    flex-direction: column;
-
-}
-.header_aside  .navbar li{
-    margin-bottom: 1.3vw;
-    display: block;
-}
-.header_aside .navbar li a {
-    font-size: 1.4vw;
-    font-weight: 600;
-    display: block;
-    color: var(--text-active);
-    padding: 0.6vw 1vw;
-    border-bottom: 0.1vw solid var(--text-color);
-}
-.header_aside .navbar li a.active{
-    color: var(--text-color);
-}
-.header_aside .navbar li a i{
-    margin-right: 1vw;
-}
-#icon_palette{
-    font-size: 2vw;
+.active {
+  color: #00f7ff;
+  transform: translateY(-8px) scale(1.2);
+  animation: float 1.5s ease-in-out infinite;
 }
 
 
+@keyframes float {
+  0% { transform: translateY(-8px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(-8px); }
+}

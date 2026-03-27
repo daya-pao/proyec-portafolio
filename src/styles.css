@@ -1,54 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Epilogue:wght@400;500;700&family=Kumbh+Sans:wght@100;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,300&family=Rubik:wght@300&family=Space+Mono:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* ===== FUENTES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Epilogue:wght@400;500;700&family=Kumbh+Sans:wght@100;400&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Rubik:wght@300&family=Space+Mono:wght@700&family=Clicker+Script&display=swap');
 
-
+/* ===== VARIABLES GLOBALES ===== */
 :root {
+    --background-color: #4e4e58;            /* fondo contenido */
+    --background-color-navbar: #1a1e2a5d;     /* fondo navbar */
+    --border-color: #2d2c38;
+    --text-color: #01dbc2;
+    --text-active: #ffffff;
+    --border-bottom: #8c8c8c;
+    /* Tamaños escalables con clamp */
     
-    /*Tema #1*/
-    --background-color:#4e4e58 ;/* Fondo contenido */
-    --background-color-navbar:  #1a1e2a;/*Fondo navbar*/
-    --border-color: #252432;/*texto rojo*/
-    --text-color: #01dbc2 ; /* Texto negro */
-    --text-active: #ffffff; /*texto active*/
-    --border-bottom: #8c8c8c /*borde nava*/
+
+    /* sidebar */
 }
 
-
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
     border: none;
     outline: none;
-    list-style: none;
-    user-select:none ;
+    user-select: none;
     scroll-behavior: smooth;
-    font-family:'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* ===== BASE ===== */
 html {
-   /*  font-size: 62.5%; */
-    font-size: clamp(50%, 10rem, 1vw);
+    transform: scale(1); /* Asegura que el zoom por defecto sea 1 (sin cambios) */
+    transform-origin: top left;
     overflow-x: hidden;
+    /* CSS global para todo el proyecto */
+/*tamaño base adaptable */
 }
 
 body {
-    background-color:var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    margin-left: var(--width-collaspsed);
+    
 }
-/*#2f2e37*/
 
- /*Tema #2*/
-:root{
-    --background-color:#4e4e58 ;/* Fondo contenido */
-    --border-color: #252432;/*texto rojo*/
-    --text-color: #01dbc2 ; /* Texto negro */
-    --text-active: #ffffff; /*texto active*/
-    --background-color: #41414e;/*Fondo navbar*/
-    --border-bottom: #8c8c91 /*borde nava*/
-}
+
+
+
+
+
+
+
+
+
+ /*Tema #2
+ :root{
+    --background-color:#4e4e58 ;/* Fondo contenido 
+    --border-color: #252432;/*texto rojo
+    --text-color: #01dbc2 ; /* Texto negro 
+    --text-active: #ffffff; /*texto active
+    --background-color: #41414e; Fondo navbar
+    --border-bottom: #8c8c91 borde nava
+}*/

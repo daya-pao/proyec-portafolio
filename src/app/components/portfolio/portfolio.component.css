@@ -1,41 +1,232 @@
+/* SECCION */
+
 .portafolio{
-    height: 100vh;
-    padding: 5vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 85vw;
-    height: 100vh;
-    position: absolute;
-    left: 15vw
-   
-}
-.portafolio h2{
-    position: absolute;
-    top:4vw;
-    left: 1;
-    font-size:3vw ;
-    font-weight: 400;
-    color: #01dbc2;
+    border:1px solid red;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:80px 20px;
 
 }
-.portafolio h2::before{
-    content: " ";
-    height: 0.4vw;
-    width: 4vw;
-    background-color: #1a1e2a;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  
+
+/* TITULO */
+
+.content_portafolio{
+
+    width:100%;
+    max-width:1200px;
+
 }
+
+.portafolio h2{
+
+  font-size:3rem;
+  font-weight:400;
+  color:#01dbc2;
+  position:relative;
+  margin-bottom:60px;
+
+}
+
+.portafolio h2::before{
+
+   content:"";
+   height:6px;
+   width:60px;
+   background:#1a1e2a;
+   position:absolute;
+   top:100%;
+   left:0;
+
+}
+
 .portafolio h2::after{
-    content: " ";
-    height: 0.4vw;
-    width: 2vw;
-    background-color: #1a1e2a;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin-top: 1vw;
-  }
+
+    content:"";
+    height:6px;
+    width:30px;
+    background:#1a1e2a;
+    position:absolute;
+    top:130%;
+    left:0;
+
+}
+
+/* GRID */
+
+.portfolio-grid{
+    border: 1px solid green;
+width:100%;
+max-width:1100px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:2px;
+justify-content:center;
+
+}
+
+/* TARJETA */
+
+.card{
+border: 1px solid hotpink;
+width:100%;
+max-width:260px;
+
+background:#111;
+
+border-radius:14px;
+
+overflow:hidden;
+
+transition:0.3s;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+
+margin:auto;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+}
+
+/* IMAGEN */
+
+.card-img{
+
+width:100%;
+height:140px;
+object-fit:cover;
+
+}
+
+/* BODY */
+
+.card-body{
+
+
+text-align:left;
+
+}
+
+.card-body h3{
+
+color:white;
+font-weight:500;
+
+margin-bottom:10px;
+
+}
+
+/* TECNOLOGIAS */
+
+.tech{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:6px;
+
+margin-bottom:12px;
+
+}
+
+.tech span{
+
+border:1px solid #7c3aed;
+
+color:#7c3aed;
+
+padding:4px 10px;
+
+border-radius:20px;
+
+font-size:11px;
+
+}
+
+/* BOTON */
+
+button{
+
+padding:8px 16px;
+
+border:none;
+
+background:#7c3aed;
+
+color:white;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:13px;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+background:#9b5cff;
+
+}
+
+/* DETALLE PROYECTO */
+
+.project-detail{
+
+max-width:900px;
+
+margin-top:40px;
+
+text-align:center;
+
+animation:fade 0.6s;
+
+}
+
+.project-detail img{
+
+width:100%;
+max-width:600px;
+
+border-radius:10px;
+
+margin:20px 0;
+
+}
+
+.close{
+
+position:absolute;
+top:20px;
+right:20px;
+
+font-size:20px;
+
+background:red;
+
+}
+
+/* ANIMACION */
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}

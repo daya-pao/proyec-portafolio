@@ -1,29 +1,33 @@
 <section class="about__lenguajes">
-  <div><h3>Skills</h3></div>
-  <div class="cubo_container">
-    <div class="grid">
-      @for (cube of cubes; track $index) {
-        <div class="cube">
-          <div class="box" (click)="showIcon($index)">
-            <div class="top"><i  [class]="cube.iconClass"></i></div>
-            <span style="--i:0;"></span>
-            <span style="--i:1;"></span>
-            <span style="--i:2;"></span>
-            <span style="--i:3;"></span>
-          </div>
-        </div>
-      }
-    </div>
-  </div>
-  <!------------------ card --------------------->
-  <div class="card__texto animate-in">
-    <div class="card__progress"[ngStyle]="{ '--i': percentage / 100, '--clr': getColor() }" >
-      <div class="progress">
-        <div class="card__icon"><i [class]="selectedIcon"  class="icon"></i></div>
-        <div class="card--porcentaje"><h2>{{ percentage }}%</h2></div>
-      </div>
-    </div>
-    <div><p class="texto">{{description}}</p></div>
+
+  <div class="about_container">
+
+    <div class="cubo_container">
+        <div><h3>Skills</h3></div>
+     <div class="grid">
+       @for (cube of cubes; track $index) {
+         <div class="cube">
+           <div class="box" (click)="showIcon($index)">
+             <div class="top"><i  [class]="cube.iconClass"></i></div>
+             <span style="--i:0;"></span>
+             <span style="--i:1;"></span>
+             <span style="--i:2;"></span>
+             <span style="--i:3;"></span>
+           </div>
+         </div>
+       }
+     </div>
+   </div>
+   <!------------------ card --------------------->
+   <div class="card__texto animate-in">
+     <div class="card__progress"[ngStyle]="{ '--i': percentage / 100, '--clr': getColor() }" >
+       <div class="progress">
+         <div class="card__icon"><i [class]="selectedIcon"  class="icon"></i></div>
+         <div class="card--porcentaje"><h2>{{ percentage }}%</h2></div>
+       </div>
+     </div>
+     <div><p class="texto">{{description}}</p></div>
+   </div>
   </div>
 </section>
 

@@ -102,11 +102,11 @@ export class AboutComponent {
   getColor(): string {
     // Puedes definir una lógica para elegir el color basado en el porcentaje
     if (this.percentage > 75) {
-      return '#43f94a'; // Verde
+      return '#858592'; // Verde
     } else if (this.percentage > 50) {
-      return '#f9d142'; // Amarillo
+      return '#191e30'; // Amarillo
     } else {
-      return '#f94a4a'; // Rojo
+      return '#01dbc2'; // Rojo
     }
   }
 

@@ -1,0 +1,26 @@
+.app-layout {
+    display: flex;      /* sidebar + contenido lado a lado */
+   
+}
+
+/* Sidebar fijo */
+app-navbar {
+    width: var(--width-collaspsed);
+    position: fixed;
+    height: 70vh;
+    top: 90px;
+    left: 9px;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: var(--width-collaspsed);
+    flex: 1;
+    /* 🔥 clave */
+    align-items: flex-start;
+
+  
+    min-height: 100vh;
+
+    overflow: auto;
+}
