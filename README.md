@@ -23,11 +23,11 @@ El portafolio utiliza una estética **Cyberpunk** con efectos de **Glassmorphism
 
 ## 🛠️ Tecnologías Aplicadas
 
-| Frontend | Calidad (QA) | Herramientas |
-| :--- | :--- | :--- |
-| **Angular** (v17.3.8) | **Automation Testing** | **Git / GitHub** |
-| **TypeScript** | **API Testing** | **Node.js** |
-| **CSS3** (Animaciones Pro) | **Software Testing** | **MySQL** |
+| Frontend | Herramientas |
+| :---  | :--- |
+| **Angular** (v17.3.8)  | **Git / GitHub** |
+| **TypeScript**   **Node.js** |
+| **CSS3** (Animaciones Pro)  | **Librerias** |
 
 ---
 
