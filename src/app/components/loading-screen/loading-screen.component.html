@@ -1,0 +1,11 @@
+@if (isLoading) {
+  <div class="loading-overlay">
+    <div class="loader-content">
+      <div class="radar-loader"></div>
+      <p class="loading-text">{{ statusText }}</p>
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="progress"></div>
+      </div>
+    </div>
+  </div>
+}

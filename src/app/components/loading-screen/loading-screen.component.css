@@ -1,0 +1,29 @@
+.loading-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: #0a0a0a;
+  display: flex; justify-content: center; align-items: center;
+  z-index: 9999; /* Por encima de todo */
+}
+
+.loader-content { text-align: center; }
+
+.loading-text {
+  color: #00ffcc;
+  font-family: 'Monospace', courier;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.radar-loader {
+  width: 50px; height: 50px;
+  border: 2px solid #00ffcc;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
