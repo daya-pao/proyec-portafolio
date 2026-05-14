@@ -1,6 +1,42 @@
 <section class="portafolio">
-    <div class="content_portafolio"><h2>Portafolio</h2></div>
-  
+    <div class="content_portafolio">
+        <h2>Proyectos</h2>
+        
+        <div class="radar-system">
+            <div class="radar-bg">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="sweep"></div>
+            </div>
 
-    
+            <!-- Estaciones de Proyectos -->
+            <div class="project-station" 
+                 *ngFor="let project of proyects; let i = index" 
+                 [ngClass]="'pos-' + i"
+                 (click)="opeModal(project)">
+                <div class="pulse-point"></div>
+                <span class="station-name">{{project.name}}</span>
+            </div>
+        </div>
+
+        <!-- Modal Glassmorphism -->
+        <div class="modal" *ngIf="selectedProject" (click)="closeModal()">
+            <div class="modal-content" (click)="$event.stopPropagation()">
+                <span class="close" (click)="closeModal()">X</span>
+                <img [src]="selectedProject.image" alt="img" class="modal-img">
+                <h3>{{selectedProject.name}}</h3>
+                <p style="font-size: 14px; color: #ccc;">{{selectedProject.description}}</p>
+                
+                <div style="margin: 10px 0;">
+                    <span *ngFor="let t of selectedProject.tech" 
+                          style="font-size: 10px; border: 1px solid #00ffcc; padding: 2px 5px; margin-right: 5px; border-radius: 3px; color: #00ffcc;">
+                        {{t}}
+                    </span>
+                </div>
+                
+                <a [href]="selectedProject.github" target="_blank" class="btn-github">Ver GitHub</a>
+            </div>
+        </div>
+    </div>
 </section>

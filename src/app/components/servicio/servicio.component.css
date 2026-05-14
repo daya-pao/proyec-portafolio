@@ -107,6 +107,13 @@
   justify-content: center;
   align-items: center;
 }
+.service:hover{
+  transform:  translateY(-10px);
+  background: rgba(0,0,0, 0.7);
+  border-color: var(--text-active);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),0 0 15px var(--text-color);
+
+}
 
 /* animación borde */
 

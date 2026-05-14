@@ -47,17 +47,15 @@ export class ServicioComponent {
      {
       icon: 'fas fa-bug',
       title: 'Pruebas de Calidad (QA)',
-      description: 'Realizo pruebas exhaustivas para asegurar la calidad y funcionalidad de tus aplicaciones.',
+      description: 'Pruebas exhaustivas para asegurar la calidad y funcionalidad de tus aplicaciones.',
       items: [
         'Pruebas Funcionales.',
         'Pruebas de Compatibilidad en Navegadores.',
         'Automatización Pruebas.',
-        'Identificación y Reporte de Errores.'
+        'Reporte de Errores.'
       ]
     }
 
   ];
  
-  
-
 }

@@ -16,14 +16,14 @@ export class AboutComponent {
   { index: 1, iconClass: 'bx bxl-php' },
   { index: 2, iconClass: 'bx bxl-html5' },
   { index: 3, iconClass: 'bx bxl-angular' },
-  { index: 4, iconClass: 'bx bxl-react' },
+  { index: 4, iconClass: 'bx bxl-nodejs' },
   { index: 5, iconClass: 'bx bxl-javascript' },
-  { index: 6, iconClass: 'bx bxl-typescript' },
+  { index: 6, iconClass: 'bx bxl-postgresql' },
   { index: 7, iconClass: 'bx bxl-python' },
   { index: 8, iconClass: 'bx bxl-git' },
-  { index: 9, iconClass: 'bx bxl-angular' },
+  { index: 9, iconClass: 'bx bxl-bootstrap' },
   { index: 10, iconClass: 'bx bxl-react' },
-  { index: 11, iconClass: 'bx bxl-javascript' }
+  { index: 11, iconClass: 'bx bxs-data' }
   ];
 
   descriptions = [
@@ -31,14 +31,14 @@ export class AboutComponent {
     'PHP es un lenguaje de scripting del lado del servidor muy utilizado para el desarrollo web y la creación de aplicaciones dinámicas.',
     'HTML5 es la última versión del lenguaje de marcado para la creación de páginas web soportando multimedia y gráficos.',
     'Angular es un framework de desarrollo web para construir aplicaciones de una sola página con una arquitectura robusta.',
-    'React es una biblioteca para construir interfaces de usuario, especialmente para aplicaciones de una sola página interactivas y dinamicas.',
+    'Entorno de ejecución para programar el Backend con JavaScript..',
     'JavaScript es un lenguaje de programación que permite la creación de contenido interactivo en la web.',
-    'Typescript es Un superconjunto de JavaScript que añade tipado estático y características avanzadas, facilitando el desarrollo de aplicaciones grandes y robustas.',
+    'Sistema avanzado de Base de Datos relacional y robusto.',
     'Python es un lenguaje de programación de alto nivel conocido por su legibilidad y simplicidad.',
     'Git es un sistema de control de versiones distribuido para el seguimiento de cambios en el código fuente.',
-    'Angular es un framework de desarrollo web para construir aplicaciones de una sola página con una arquitectura robusta.',
+    'Framework de CSS para diseño web adaptable y rápido..',
     'React es una biblioteca para construir interfaces de usuario, especialmente para aplicaciones de una sola página interactivas y dinamicas.',
-    'JavaScript es un lenguaje de programación que permite la creación de contenido interactivo en la web.'
+    'Icono universal para representar Almacenamiento de Datos..'
   ];
 
   percentages = [

@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   position: fixed;
   top: 20px;
   left: 50%;
@@ -7,32 +7,39 @@
   gap: 30px;
   padding: 12px 28px;
   border-radius: 40px;
-
+  /* Fondo oscuro para que resalte el brillo */
+  background: rgba(20, 20, 20, 0.8); 
+  backdrop-filter: blur(10px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-
   z-index: 1000;
 }
 
 .icon {
-  color: #777;
+  color: #555; /* Color base más oscuro para que el brillo destaque */
   font-size: 28px;
   transition: all 0.3s ease;
+  /* Brillo tenue constante para los inactivos */
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
 }
 
 .icon:hover {
   transform: translateY(-5px);
-  color: white;
+  color: #fff;
+  /* El icono "alumbra" más al acercar el mouse */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .active {
   color: #00f7ff;
   transform: translateY(-8px) scale(1.2);
+  /* Brillo neón para el estado activo */
+  filter: drop-shadow(0 0 15px rgba(0, 247, 255, 0.8));
   animation: float 1.5s ease-in-out infinite;
 }
 
-
 @keyframes float {
-  0% { transform: translateY(-8px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(-8px); }
+  0% { transform: translateY(-8px) scale(1.2); }
+  50% { transform: translateY(-12px) scale(1.2); }
+  100% { transform: translateY(-8px) scale(1.2); }
 }

@@ -10,18 +10,38 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
  
-  projects = [
- 
-    
-]
+  proyects = [
+    {
+      name:"Plataforma Gamer",
+      description:"Plataforma donde los usuarios pueden ver trailers y nocicias de  videojuegos.",
+      image:"assets/pagina_game.PNG",
+      github:"https://github.com/daya-pao/angular_game.git",
+      tech:["angular","TtpeScrip","API"]
+    },
+    {
+      name:"Gestion de Vacunas",
+      description:"Sistema para gestionar vacunas de mascotas.",
+      image:"assets/mascotasG.PNG",
+      github:"https://github.com/daya-pao/mascotas_vet.git",
+      tech:["PHP","MySQL","MVC"]
+    },
+    {
+      name:"Simulador de futbol",
+      description:"Juego de simulador de futbol.",
+      image:"assets/simuladorF.PNG",
+      github:"https://github.com/daya-pao/simulador_futbol.git",
+      tech:["angular","TtpeScrip","CSS"]
+    },
 
-selectedProject:any = null
+  ];
 
-openProject(project:any){
-this.selectedProject = project
-}
+  selectedProject:any = null;
+  opeModal(proyect:any){
+    this.selectedProject = proyect;
+  }
 
-closeProject(){
-this.selectedProject = null
-}
+  closeModal(){
+    this.selectedProject = null
+  }
+
 }

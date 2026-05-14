@@ -13,9 +13,9 @@
   display: flex;
   width: 100%;
   max-width: 1200px;
-  gap: 60px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
+  
  
 }
 .cubo_container {
@@ -47,17 +47,16 @@
     width: 30px;
     background-color: var(--border-color);
     position: absolute;
-    top: 125%;
+    top: 120%;
     left: 0;
 }
 .grid{
- 
+
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px; 
-  max-width: 1200px; 
-  padding:4rem;
-
+  padding:33px;
 }
 .cube{
 
@@ -244,11 +243,9 @@ i{
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  gap:20rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: conic-gradient(
     var(--clr) calc(var(--i) * 100%),
     transparent 0
@@ -331,5 +328,4 @@ i{
     .cubo_container h3{
        margin-right: 23rem;
     }
-
 }

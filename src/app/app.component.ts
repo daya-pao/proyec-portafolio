@@ -5,11 +5,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { BackgroundComponentComponent } from './components/background-component/background-component.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent],
+  imports: [RouterOutlet,NavbarComponent,BackgroundComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
