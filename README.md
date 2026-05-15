@@ -1,27 +1,35 @@
-# ProyecPro
+# PORTAFOLIO WEB | Dayana Arevalo 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+¡Bienvenida/o a mi centro de mando! Este no es un portafolio común; es una experiencia interactiva desarrollada con **Angular** que refleja mi perfil como **Web Developer** y **QA Software Analyst**.
 
-## Development server
+---
+<img width="1189" height="604" alt="fotoP1" src="https://github.com/user-attachments/assets/385f7114-15bf-4997-b117-8a0c8a9f1286" />
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<img width="1263" height="602" alt="fotoP2" src="https://github.com/user-attachments/assets/a92d14ac-e58e-486b-baf9-c6245d3d68c4" />
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🌌 Concepto del Proyecto
+El portafolio utiliza una estética **Cyberpunk** con efectos de **Glassmorphism**. La pieza central es un **Radar de Proyectos** que escanea constantemente el espacio de trabajo para detectar mis creaciones más recientes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### ✨ Características Principales
+- **Pantalla de Carga (Scanner):** Un pre-loader que simula la búsqueda de información en tiempo real antes de revelar la interfaz.
+- **Interfaz de Radar Interactiva:** Los proyectos se visualizan como estaciones de pulso en un mapa circular con una línea de barrido animada.
+- **Modales de Detalles:** Ventanas emergentes con efectos de transparencia y desenfoque para mostrar información técnica y enlaces a GitHub.
+- **Arquitectura Standalone:** Desarrollado bajo los estándares modernos de Angular 17.3.8.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Tecnologías Aplicadas
 
-## Running end-to-end tests
+| Frontend | Herramientas |
+| :---  | :--- |
+| **Angular** (v17.3.8)  | **Git / GitHub** |
+| **TypeScript**   **Node.js** |
+| **CSS3** (Animaciones Pro)  | **Librerias** |
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🚀 LINK WEB :
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
