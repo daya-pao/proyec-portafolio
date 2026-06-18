@@ -26,10 +26,10 @@ El portafolio utiliza una estética **Cyberpunk** con efectos de **Glassmorphism
 | Frontend | Herramientas |
 | :---  | :--- |
 | **Angular** (v17.3.8)  | **Git / GitHub** |
-| **TypeScript**   **Node.js** |
+| **TypeScript** |  **Node.js** |
 | **CSS3** (Animaciones Pro)  | **Librerias** |
 
 ---
 
-## 🚀 LINK WEB :
+## 🚀 LINK WEB : daya-arevalo.vercel.app
 
